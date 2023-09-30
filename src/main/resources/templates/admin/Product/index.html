@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="admin/fragments/head::head">
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+	<!-- Site wrapper -->
+	<div class="wrapper">
+
+		<div th:replace="admin/fragments/header::header"></div>
+
+		<!-- =============================================== -->
+
+		<!-- Left side column. contains the sidebar -->
+		<div th:replace="admin/fragments/aside::aside"></div>
+		<!-- =============================================== -->
+
+		<!-- Content Wrapper. Contains page content -->
+		<div class="content-wrapper">
+			<!-- Content Header (Page header) -->
+			<section class="content-header">
+				<h1>
+					Chào mừng bạn đến với trang quản trị
+				</h1>
+				<ol class="breadcrumb">
+					<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+					<li><a href="#">Examples</a></li>
+					<li class="active">Blank page</li>
+				</ol>
+			</section>
+
+			<!-- Main content -->
+			<section class="content">
+
+				<!-- Default box -->
+				<div class="box">
+
+				</div>
+				<div class="box-body">
+					<div class="box">
+						<div class="box-header with-border">
+							<h3 class="box-title">Bordered Table</h3>
+						</div>
+
+						<div class="box-body">
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<th style="width: 10px">ID</th>
+										<th>Product Name</th>
+										<th>Product Address</th>
+										<th>Price</th>
+										<th>Models</th>
+										<th>Image</th>
+										<th>Category</th>
+										<th>Action</th>
+									</tr>
+
+									<tr th:each="product:${listProduct}">
+										<td th:text="${product.id}"></td>
+										<td th:text="${product.productName}"></td>
+										<td th:text="${product.productAddress}"></td>
+										<td th:text="${product.price}"></td>
+										<td th:text="${product.models}"></td>
+										<td width="20%">
+											<img th:src="@{'/uploads/'+${product.image}}" width="50%" alt="User Image">
+										</td>
+										<td th:text="${product.category.categoryName}"></td>
+										<td>
+											<a th:href="@{/admin/edit-product/{id}(id=${product.id})}" class="btn btn-success">Edit</a>
+											<a th:href="@{/admin/delete-product/{id}(id=${product.id})}" onclick=" confirm('Bạn chắc chắn muốn xóa không')" class="btn btn-danger">Delete</a>
+											
+											<a th:href="@{/admin/product-add}" class="btn btn-success">Add</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="box-footer clearfix">
+							<ul class="pagination pagination-sm no-margin pull-right">
+								<li th:if="${currentPage>1}"><a th:href="@{'?pageNo='+${currentPage-1}}">«</a></li>
+								<li th:each="i:${#numbers.sequence(1,totalPage)}" th:classappend="${currentPage == i ? 'active':''}"><a th:href="@{'?pageNo='+${i}}" th:text="${i}"></a></li>
+								<li th:if="${currentPage<totalPage}"><a th:href="@{'?pageNo='+${currentPage+1}}">»</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					
+				</div>
+				<!-- /.box-body -->
+				<div class="box-footer">
+				</div>
+				<!-- /.box-footer-->
+		</div>
+		<!-- /.box -->
+
+		</section>
+		<!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+
+	<div th:replace="admin/fragments/footer::footer"></div>
+
+	</div>
+
+	<div th:replace="admin/fragments/script::script"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>CarForYou - Responsive Car Dealer HTML5 Template</title>
+<!--Bootstrap -->
+<link rel="stylesheet" th:href="@{../assetsuser/css/bootstrap.min.css}" type="text/css">
+<!--Custome Style -->
+<link rel="stylesheet" th:href="@{../assetsuser/css/style.css}" type="text/css">
+<!--OWL Carousel slider-->
+<link rel="stylesheet" th:href="@{../assetsuser/css/owl.carousel.css}" type="text/css">
+<link rel="stylesheet" th:href="@{../assetsuser/css/owl.transitions.css}" type="text/css">
+<!--slick-slider -->
+<link th:href="@{../assetsuser/css/slick.css}" rel="stylesheet">
+<!--bootstrap-slider -->
+<link th:href="@{../assetsuser/css/bootstrap-slider.min.css}" rel="stylesheet">
+<!--FontAwesome Font Style -->
+<link th:href="@{../assetsuser/css/fontawesome.min.css}" rel="stylesheet">
+
+<!-- SWITCHER -->
+		<link rel="stylesheet" id="switcher-css" type="text/css" th:href="@{../assetsuser/switcher/css/switcher.css}" media="all" />
+		<link rel="alternate stylesheet" type="text/css" th:href="@{../assetsuser/switcher/css/red.css}" title="red" media="all" data-default-color="true" />
+		<link rel="alternate stylesheet" type="text/css" th:href="@{../assetsuser/switcher/css/orange.css}" title="orange" media="all" />
+		<link rel="alternate stylesheet" type="text/css" th:href="@{../assetsuser/switcher/css/blue.css}" title="blue" media="all" />
+		<link rel="alternate stylesheet" type="text/css" th:href="@{../assetsuser/switcher/css/pink.css}" title="pink" media="all" />
+		<link rel="alternate stylesheet" type="text/css" th:href="@{../assetsuser/switcher/css/green.css}" title="green" media="all" />
+		<link rel="alternate stylesheet" type="text/css" th:href="@{../assetsuser/switcher/css/purple.css}" title="purple" media="all" />
+        
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" th:href="@{../assetsuser/images/favicon-icon/apple-touch-icon-144-precomposed.png}">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" th:href="@{../assetsuser/images/favicon-icon/apple-touch-icon-114-precomposed.png}">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" th:href="@{../assetsuser/images/favicon-icon/apple-touch-icon-72-precomposed.png}">
+<link rel="apple-touch-icon-precomposed" th:href="@{../assetsuser/images/favicon-icon/apple-touch-icon-57-precomposed.png}">
+<link rel="shortcut icon" th:href="@{../assetsuser/images/favicon-icon/favicon.png}">
+<!-- Google-Font-->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->  
+</head>
+<body>
+
+<div class="coming_soon_wrap div_zindex white-text"> 
+<!-- Start Switcher -->
+<div class="switcher-wrapper">	
+    <div class="demo_changer">
+        <div class="demo-icon customBgColor"><i class="fa fa-cog fa-spin fa-2x"></i></div>
+        <div class="form_holder">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="predefined_styles">
+                        <div class="skin-theme-switcher">
+                            <h4>Color</h4>
+                            <a href="#" data-switchcolor="red" class="styleswitch" style="background-color:#de302f;"> </a>
+                            <a href="#" data-switchcolor="orange" class="styleswitch" style="background-color:#f76d2b;"> </a>
+                            <a href="#" data-switchcolor="blue" class="styleswitch" style="background-color:#228dcb;"> </a>
+                            <a href="#" data-switchcolor="pink" class="styleswitch" style="background-color:#FF2761;"> </a>
+                            <a href="#" data-switchcolor="green" class="styleswitch" style="background-color:#2dcc70;"> </a>
+                            <a href="#" data-switchcolor="purple" class="styleswitch" style="background-color:#6054c2;"> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Switcher -->  
+
+  <!--Header-->
+  <header class="navbar-fixed-top">
+    <div class="default-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 col-md-2">
+            <div class="logo"> <a th:href="@{/}"><img th:src="@{../assetsuser/images/logo.png}" alt="image"/></a> </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--/Header-->
+  
+  <section class="coming_soon_content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <h1>Coming Soon</h1>
+          <h3>We are currently working on launching the new website.</h3>
+          <div class="timer_countdown">
+            <div class="countdown styled"></div>
+          </div>
+        </div>
+        <div class="col-md-7"> <img th:src="@{../assetsuser/images/car_755x430.png}" alt="image"> </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--Footer-->
+ 
+  <!--/Footer--> 
+</div>
+<div class="coming_soon_bg">
+  <div class="dark-overlay"></div>
+</div>
+
+<!-- Coontact-Form -->
+<div class="modal fade" id="contact_form_popup">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3>Do you have any Questions? </h3>
+      </div>
+      <div class="modal-body">
+        <form action="#" method="get">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" rows="4" placeholder="Message" class="form-control" required></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn">Send Message <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Coontact-Form --> 
+
+<!-- Scripts --> 
+<script th:src="@{../assetsuser/js/jquery.min.js}"></script>
+<script th:src="@{../assetsuser/js/bootstrap.min.js}"></script> 
+<script th:src="@{../assetsuser/js/interface.js}"></script> 
+<link th:href="@{../assetsuser/css/fontawesome.min.css}" rel="stylesheet">
+<!--bootstrap-slider-JS--> 
+<script th:src="@{../assetsuser/js/bootstrap-slider.min.js}"></script> 
+<!--Switcher-->
+<script th:src="@{../assetsuser/switcher/js/switcher.js}"></script>
+<!--Slider-JS--> 
+<script th:src="@{../assetsuser/js/slick.min.js}"></script> 
+<script th:src="@{../assetsuser/js/owl.carousel.min.js}"></script>
+<script th:src="@{../assetsuser/js/jquery.countdown.min.js}"></script>
+<script th:src="@{../assetsuser/js/countdown_date.js}"></script>
+<script th:src="@{../assetsuser/js/31f5977fdc.js}"></script> 
+</body>
+</html>

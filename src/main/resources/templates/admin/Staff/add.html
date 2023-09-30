@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="admin/fragments/head::head">
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+	<!-- Site wrapper -->
+	<div class="wrapper">
+
+		<div th:replace="admin/fragments/header::header"></div>
+
+		<!-- =============================================== -->
+
+		<!-- Left side column. contains the sidebar -->
+		<div th:replace="admin/fragments/aside::aside"></div>
+		<!-- =============================================== -->
+
+		<!-- Content Wrapper. Contains page content -->
+		<div class="content-wrapper">
+			<!-- Content Header (Page header) -->
+			<section class="content-header">
+				<h1>
+					Blank page
+					<small>it all starts here</small>
+				</h1>
+				<ol class="breadcrumb">
+					<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+					<li><a href="#">Examples</a></li>
+					<li class="active">Blank page</li>
+				</ol>
+			</section>
+
+			<!-- Main content -->
+			<section class="content">
+
+				<div>
+					<div class="box box-primary">
+						<div class="box-header with-border">
+							<h3 class="box-title">Quick Example</h3>
+						</div>
+
+
+						<form role="form" method="post" th:action="@{/admin/staff-add}" th:object="${staff}"
+							enctype="multipart/form-data">
+							<div class="box-body">
+								<div class="form-group">
+									<label for="exampleInputEmail1"> Name</label>
+									<input type="text" class="form-control" id="exampleInputEmail1"
+										placeholder="Product Name" th:field="*{name}">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Position</label>
+									<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Price"
+										th:field="*{position}">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Image</label>
+									<input type="file" class="form-control" id="exampleInputEmail1" name="fileImage">
+								</div>
+								
+								<div class="form-group">
+									<label for="exampleInputEmail1">Email</label>
+									<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Models"
+										th:field="*{email}">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Phone</label>
+									<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Models"
+										th:field="*{phone}">
+								</div>
+								<div class="box-footer">
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</div>
+						</form>
+					</div>
+				</div>
+
+			</section>
+			<!-- /.content -->
+		</div>
+		<!-- /.content-wrapper -->
+
+		<div th:replace="admin/fragments/footer::footer"></div>
+
+	</div>
+
+	<div th:replace="admin/fragments/script::script"></div>
+</body>
+
+</html>
